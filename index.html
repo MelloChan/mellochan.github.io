@@ -179,10 +179,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="前提-自备腾讯云服务器-系统环境-centos-6-6"><a href="#前提-自备腾讯云服务器-系统环境-centos-6-6" class="headerlink" title="前提:自备腾讯云服务器 系统环境:centos 6.6"></a>前提:自备腾讯云服务器 系统环境:centos 6.6</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java:"></a>Java:</h3><p> yum install java-1.8.0-openjdk*<br> javac version  [查看版本信息]</p>
-<h3 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat:"></a>Tomcat:</h3><p> wget <a href="http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz" target="_blank" rel="external">http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz</a>  [获取tomcat8压缩包]<br> tar -zxvf apache-8.0.44.tar.gz [解压]<br> mv apache-tomcat-8.0.44 /usr/local/tomcat  [将解压文件移动到该目录]  </p>
-<h3 id="加入系统服务"><a href="#加入系统服务" class="headerlink" title="加入系统服务:"></a>加入系统服务:</h3><p>1.切换到/usr/local/tomcat/bin目录下<br>2.vi startup.sh文件<br>3.在startup.sh的文件开头的地方添加如下内容<br>!/bin/sh   [这个是默认首行,在之后添加以下三行]<br>chkconfig: 2345 80 90<br>description:tomcat auto start<br>processname: tomcat<br>4.保存退出<br>5.编辑catalina.sh文件<br>6.vi catalina.sh<br>然后直接输入./ 出现/符号<br>然后输入export按回车开始搜索export<br>然后添加环境变量:<br>export QIBM_MULTI_THREADED=Y [这是搜索到的那一行,在之后添加以下三行]<br>export CATALINA_BASE=/usr/local/tomcat<br>CATALINA_HOME=/usr/local/tomcat<br>CATALINA_TMPDIR=/usr/local/tomcat<br>7.保存退出<br>8.添加连接<br>ln -s /usr/local/tomcat/bin/startup.sh  /etc/rc.d/init.d/tomcat8<br>通过上面的命令将startup.sh文件连接到init.d目录下名称为tomcat8<br>然后切换到/etc/rc.d/init.d/目录<br>用ll查看一下tomcat是否有可执行权限<br>如果没有的话使用chmod +x tomcat8 添加执行权限<br>然后用chkconfig –add tomcat8  添加开机启动服务<br>最后使用chkconfig –list确认一下是否添加成功  </p>
-<ol>
-<li>service tomcat6 start  [启动]<br>service tomcat6 stop   [停止]<br>service tomcat6 restart  [重启]
+<h3 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat:"></a>Tomcat:</h3><p> wget <a href="http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz" target="_blank" rel="external">http://mirrors.cnnic.cn/apache/tomcat/tomcat-8/v8.0.44/bin/apache-tomcat-8.0.44.tar.gz</a>  [获取tomcat8压缩包]<br> tar -zxvf apache-8.0.44.tar.gz [解压]<br> mv apache-tomcat-8.0.44 /usr/local/tomcat  [将解压文件移动到该目录]<br>
         
           <a class="article-more-a" href="/2017/06/03/JavaWeb开发-基本环境搭建-Java-Tomcat-MySQL-Nginx/#more">more >></a>
         
