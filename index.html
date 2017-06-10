@@ -158,6 +158,56 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于spring-boot的热部署问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/10/关于spring-boot的热部署问题/">关于spring-boot的热部署问题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/10/关于spring-boot的热部署问题/" class="archive-article-date">
+  	<time datetime="2017-06-10T06:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:  </p>
+<p><dependency><br>        <groupid>org.springframework.boot</groupid><br>        <artifactid>spring-boot-devtools</artifactid><br>        <optional>true</optional><br></dependency><br>但重启项目后修改文件热部署并没有生效.后来查阅资料发现:<br>原来在idea下,自动编译默认是关闭的,需要在 setting-&gt;Build-&gt;Compiler-&gt;Build project automatically勾上.  </p>
+<h2 id="需要注意"><a href="#需要注意" class="headerlink" title="需要注意"></a>需要注意</h2><p>idea在项目运行时或debug中,也会停掉自动编译,因此此时更新完文件需要手动build-&gt; Ctrl-b. </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/10/关于spring-boot的热部署问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-JavaWeb开发-基本环境搭建-Java-Tomcat-MySQL-Nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
