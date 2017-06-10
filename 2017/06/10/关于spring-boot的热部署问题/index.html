@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://mellochan.github.io">
   <title>关于spring-boot的热部署问题 | MelloChan的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:           org.springframework.boot        spring-boot-devtools        true但重启项目后修改文件热部署并没有生效.后来查阅资料发现:原来在idea下,自动编译默认是关闭的,需要在 setting-&amp;gt;Build-&amp;gt;Compiler-">
+  <meta name="description" content="idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:     &amp;lt;dependency&amp;gt;           &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;           &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;">
 <meta name="keywords" content="spring-boot,热部署">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于spring-boot的热部署问题">
 <meta property="og:url" content="http://mellochan.github.io/2017/06/10/关于spring-boot的热部署问题/index.html">
 <meta property="og:site_name" content="MelloChan的个人博客">
-<meta property="og:description" content="idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:           org.springframework.boot        spring-boot-devtools        true但重启项目后修改文件热部署并没有生效.后来查阅资料发现:原来在idea下,自动编译默认是关闭的,需要在 setting-&amp;gt;Build-&amp;gt;Compiler-">
-<meta property="og:updated_time" content="2017-06-10T07:07:52.876Z">
+<meta property="og:description" content="idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:     &amp;lt;dependency&amp;gt;           &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;           &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;">
+<meta property="og:updated_time" content="2017-06-10T07:38:32.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于spring-boot的热部署问题">
-<meta name="twitter:description" content="idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:           org.springframework.boot        spring-boot-devtools        true但重启项目后修改文件热部署并没有生效.后来查阅资料发现:原来在idea下,自动编译默认是关闭的,需要在 setting-&amp;gt;Build-&amp;gt;Compiler-">
+<meta name="twitter:description" content="idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:     &amp;lt;dependency&amp;gt;           &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;           &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="MelloChan的个人博客" type="application/atom+xml">
   
@@ -174,8 +174,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:  </p>
-<p><dependency><br>        <groupid>org.springframework.boot</groupid><br>        <artifactid>spring-boot-devtools</artifactid><br>        <optional>true</optional><br></dependency><br>但重启项目后修改文件热部署并没有生效.后来查阅资料发现:<br>原来在idea下,自动编译默认是关闭的,需要在 setting-&gt;Build-&gt;Compiler-&gt;Build project automatically勾上.  </p>
+        <p>idea下关于spring-boot的热部署问题,一开始仅仅在pom.xml下引入:    </p>
+<pre><code>&lt;dependency&gt;  
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;  
+        &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;  
+        &lt;optional&gt;true&lt;/optional&gt;  
+&lt;/dependency&gt;
+</code></pre><p>但重启项目后修改文件热部署并没有生效.后来查阅资料发现:<br>原来在idea下,自动编译默认是关闭的,需要在 setting-&gt;Build-&gt;Compiler-&gt;Build project automatically勾上.  </p>
 <h2 id="需要注意"><a href="#需要注意" class="headerlink" title="需要注意"></a>需要注意</h2><p>idea在项目运行时或debug中,也会停掉自动编译,因此此时更新完文件需要手动build-&gt; Ctrl-b. </p>
 
       
@@ -388,7 +393,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">姓名:陈文铭[MelloChan]&lt;br&gt;理想:当一名安安静静的JavaWeb程序员.&lt;br&gt;目标:家人、技术、音乐、小说、ACG.&lt;br&gt;现实:或许很难,但我在路上,在努力.&lt;br&gt;观点:技术即自由与分享,愿与阁下互相学习交流[QQ:352983198],共勉.&lt;br&gt;座右铭:高山仰止,景行行止,虽不能至,心向往之.&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">姓名:陈文铭[MelloChan]&lt;br&gt;理想:当一名安静的JavaWeb工程师.&lt;br&gt;目标:家人、技术、音乐、小说、ACG.&lt;br&gt;现实:或许很难,但我在路上,在努力.&lt;br&gt;观点:技术即自由与分享,愿与阁下互相学习交流[QQ:352983198],共勉.&lt;br&gt;座右铭:高山仰止,景行行止,虽不能至,心向往之.&lt;br&gt;</div>
   	  	
     	</section>
     
